@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'prism.css';
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  h1 {
+    @apply text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-3xl font-bold tracking-tight lg:text-4xl;
+  }
+  h4 {
+    @apply text-2xl font-bold md:text-3xl;
+  }
+  h5 {
+    @apply text-xl font-bold md:text-2xl;
+  }
+  h6 {
+    @apply text-lg font-bold md:text-xl;
+  }
+  p {
+    @apply text-base md:text-lg;
+  }
+  small,
+  small * {
+    @apply text-sm font-medium md:text-base;
+  }
+  :is(h1, h2, h3, h4, h5, h6) {
+    & > em {
+      @apply text-gradient-500 not-italic;
+    }
+    & > span {
+      color: var(--tw-prose-counters);
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient-500 {
+    @apply bg-gradient-to-br from-alpha to-beta bg-clip-text text-transparent;
+  }
+  .bg-gradient-omega-900 {
+    @apply bg-gradient-to-r from-omega-900 to-omega-800;
+  }
+  .with-back-plate {
+    @apply relative mb-2 -translate-x-2 md:mb-2 md:-translate-x-2;
+    &::before {
+      @apply absolute right-0 bottom-0 h-full w-full translate-y-2 translate-x-2 bg-white md:translate-y-2 md:translate-x-2;
+      content: '';
+      z-index: -1;
+    }
+  }
+}

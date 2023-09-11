@@ -1,0 +1,1 @@
+# EdgeFolio - Next.js Theme
