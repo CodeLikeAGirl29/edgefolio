@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import classNames from 'clsx'
-import Image from '@/components/Image'
-import Icon from '@/components/Icon'
-import Tag from '@/components/Tag'
+import React from "react";
+import Link from "next/link";
+import classNames from "clsx";
+import Image from "@/components/Image";
+import Icon from "@/components/Icon";
+import Tag from "@/components/Tag";
 
 const ProjectCardHorizontal = ({
   title,
@@ -16,16 +16,16 @@ const ProjectCardHorizontal = ({
   index,
 }) => (
   <div
-    href={slug.join('/')}
+    href={slug.join("/")}
     aria-label={title}
     className={classNames(
-      'group grid items-center transition-all duration-200 md:grid-cols-2 md:gap-10',
-      'dark:bg-gradient-omega-900 prose prose-zinc bg-white dark:prose-invert dark:md:shadow-lg'
+      "group grid items-center transition-all duration-200 md:grid-cols-2 md:gap-10",
+      "dark:bg-gradient-omega-900 prose prose-zinc bg-white dark:prose-invert dark:md:shadow-lg",
     )}
   >
     {images && (
       <Link
-        href={slug.join('/')}
+        href={slug.join("/")}
         aria-label={title}
         className="not-prose relative block h-80 w-full p-4"
       >
@@ -67,7 +67,7 @@ const ProjectCardHorizontal = ({
       ) : (
         <h6 className="text-omega-400">{logo.alt}</h6>
       )}
-      <Link href={slug.join('/')} aria-label={title}>
+      <Link href={slug.join("/")} aria-label={title}>
         <h4 className="mt-6 transition-colors group-hover:text-accent dark:group-hover:text-alpha">
           {title}
         </h4>
@@ -75,10 +75,16 @@ const ProjectCardHorizontal = ({
       <small className="mt-6 block">{description}</small>
       {tags && (
         <>
-          <div className="mb-2 mt-6 font-bold dark:text-accent-400">Technologies</div>
+          <div className="mb-2 mt-6 font-bold dark:text-accent-400">
+            Technologies
+          </div>
           <div className="mt-2">
             {tags?.map((tag) => (
-              <Tag key={tag.title} slug={tag.slug} className="m-0.5 font-mono text-sm lg:mr-2">
+              <Tag
+                key={tag.title}
+                slug={tag.slug}
+                className="m-0.5 font-mono text-sm lg:mr-2"
+              >
                 {tag.title}
               </Tag>
             ))}
@@ -97,6 +103,6 @@ const ProjectCardHorizontal = ({
       )}
     </div>
   </div>
-)
+);
 
-export default ProjectCardHorizontal
+export default ProjectCardHorizontal;

@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { IoLink } from 'react-icons/io5'
+import Link from "next/link";
+import { IoLink } from "react-icons/io5";
 
-const MDXHeading = ({ as = 'h1', ...props }) => {
-  const Component = as
+const MDXHeading = ({ as = "h1", ...props }) => {
+  const Component = as;
 
   return props.id ? (
     <Link href={`#${props.id}`} className="group no-underline">
@@ -13,7 +13,7 @@ const MDXHeading = ({ as = 'h1', ...props }) => {
     </Link>
   ) : (
     <Component {...props}>{props.children}</Component>
-  )
-}
+  );
+};
 
-export default MDXHeading
+export default MDXHeading;

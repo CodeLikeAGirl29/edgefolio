@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
-import { grpahCMSImageLoader } from '../util'
+import { grpahCMSImageLoader } from "../util";
 
 const Author = ({ author }) => (
   <div className="relative mt-20 mb-8 rounded-lg bg-black bg-opacity-20 p-12 text-center">
@@ -19,6 +19,6 @@ const Author = ({ author }) => (
     <h3 className="mt-4 mb-4 text-lg font-bold text-white">{author.name}</h3>
     <p className="text-ls text-white">{author.bio}</p>
   </div>
-)
+);
 
-export default Author
+export default Author;

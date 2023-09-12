@@ -1,4 +1,4 @@
-import classNames from 'clsx'
+import classNames from "clsx";
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -12,16 +12,16 @@ import {
   WhatsappIcon,
   PocketShareButton,
   PocketIcon,
-} from 'next-share'
+} from "next-share";
 
 const SocialShare = (props) => {
-  const { className, url, quote, round = false, size = 32, ...rest } = props
+  const { className, url, quote, round = false, size = 32, ...rest } = props;
 
   return (
     <div
       className={classNames(
-        'flex flex items-center space-x-2 pt-6 md:flex-col md:space-x-0 md:space-y-2',
-        className
+        "flex flex items-center space-x-2 pt-6 md:flex-col md:space-x-0 md:space-y-2",
+        className,
       )}
       {...rest}
     >
@@ -39,14 +39,14 @@ const SocialShare = (props) => {
       <WhatsappShareButton url={url} title={quote} separator=":: ">
         <WhatsappIcon size={size} round={round} />
       </WhatsappShareButton>
-      <PocketShareButton url={url} title={'Next Share'}>
+      <PocketShareButton url={url} title={"Next Share"}>
         <PocketIcon size={size} round={round} />
       </PocketShareButton>
       <EmailShareButton url={url} subject={quote} body="body">
         <EmailIcon size={size} round={round} />
       </EmailShareButton>
     </div>
-  )
-}
+  );
+};
 
-export default SocialShare
+export default SocialShare;

@@ -1,14 +1,14 @@
-import React from 'react'
-import { useFormContext } from 'react-hook-form'
+import React from "react";
+import { useFormContext } from "react-hook-form";
 
 const FormCheckbox = React.forwardRef((props, ref) => {
-  const { id, label, value, type = 'checkbox', name } = props
-  const { setValue } = useFormContext()
+  const { id, label, value, type = "checkbox", name } = props;
+  const { setValue } = useFormContext();
 
   const handleChange = (e) => {
-    const { value, checked } = e.target
-    setValue(e.target.name, value ? value : checked)
-  }
+    const { value, checked } = e.target;
+    setValue(e.target.name, value ? value : checked);
+  };
 
   return (
     <>
@@ -25,9 +25,9 @@ const FormCheckbox = React.forwardRef((props, ref) => {
         {label}
       </label>
     </>
-  )
-})
+  );
+});
 
-FormCheckbox.displayName = 'FormCheckbox'
+FormCheckbox.displayName = "FormCheckbox";
 
-export default FormCheckbox
+export default FormCheckbox;

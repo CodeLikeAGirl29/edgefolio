@@ -1,20 +1,20 @@
-import TagCard from '@/components/TagCard'
-import BlogCardVertical from '@/components/BlogCardVertical'
-import ContentRenderer from '@/components/ContentRenderer'
-import Paging from '@/components/Paging'
-import useInfinitePaging from '@/components/useInfinitePaging'
-import Newsletter from '@/components/Newsletter'
-import Reveal from '@/components/Reveal'
-import Sep from '@/components/Sep'
+import TagCard from "@/components/TagCard";
+import BlogCardVertical from "@/components/BlogCardVertical";
+import ContentRenderer from "@/components/ContentRenderer";
+import Paging from "@/components/Paging";
+import useInfinitePaging from "@/components/useInfinitePaging";
+import Newsletter from "@/components/Newsletter";
+import Reveal from "@/components/Reveal";
+import Sep from "@/components/Sep";
 
 const Layout = ({ pagination, collection, slug, content, categories }) => {
-  const { records, infinitePaging } = collection
-  const { currentPage, totalPages } = pagination
+  const { records, infinitePaging } = collection;
+  const { currentPage, totalPages } = pagination;
   const [infiniteRecords] = useInfinitePaging({
     currentPage,
     records,
     enabled: infinitePaging,
-  })
+  });
 
   return (
     <div className="mx-auto w-full">
@@ -56,22 +56,22 @@ const Layout = ({ pagination, collection, slug, content, categories }) => {
             )}
           </div>
           {Array.from({ length: currentPage }, (_, i) => {
-            const page = i + 1
-            const isStaticPage = page === currentPage
+            const page = i + 1;
+            const isStaticPage = page === currentPage;
             const pageRecords = isStaticPage
               ? records
-              : infinitePaging && infiniteRecords[page]?.records
-            if (!pageRecords) return null
+              : infinitePaging && infiniteRecords[page]?.records;
+            if (!pageRecords) return null;
             return (
               <div
                 key={`page-${page}`}
                 className="mt-4 grid grid-cols-1 gap-6 md:mt-6 md:grid-cols-2 lg:grid-cols-3"
               >
                 {pageRecords.map((record) => (
-                  <BlogCardVertical key={record.slug.join('/')} {...record} />
+                  <BlogCardVertical key={record.slug.join("/")} {...record} />
                 ))}
               </div>
-            )
+            );
           })}
           <Paging
             infinite={infinitePaging}
@@ -82,7 +82,7 @@ const Layout = ({ pagination, collection, slug, content, categories }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

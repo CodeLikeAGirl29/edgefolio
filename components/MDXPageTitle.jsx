@@ -1,4 +1,4 @@
-import Sep from '@/components/Sep'
+import Sep from "@/components/Sep";
 
 const PageTitle = ({ children }) => (
   <div className="-mx-3 -mt-3 md:m-0">
@@ -7,6 +7,6 @@ const PageTitle = ({ children }) => (
     </div>
     <Sep className="md:bg-none" line />
   </div>
-)
+);
 
-export default PageTitle
+export default PageTitle;

@@ -1,10 +1,10 @@
-import React from 'react'
-import FormInput from '@/components/FormInput'
+import React from "react";
+import FormInput from "@/components/FormInput";
 
 const FormTextarea = React.forwardRef((props, ref) => {
-  return <FormInput {...props} ref={ref} type="textarea" />
-})
+  return <FormInput {...props} ref={ref} type="textarea" />;
+});
 
-FormTextarea.displayName = 'FormTextarea'
+FormTextarea.displayName = "FormTextarea";
 
-export default FormTextarea
+export default FormTextarea;

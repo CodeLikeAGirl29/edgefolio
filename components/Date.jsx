@@ -1,10 +1,10 @@
-import React from 'react'
-import { config } from '../theme.config'
+import React from "react";
+import { config } from "../theme.config";
 
 const DateComponent = (props) => {
-  const { date, className, ...rest } = props
-  if (!date) return null
-  const dateObj = new Date(date)
+  const { date, className, ...rest } = props;
+  if (!date) return null;
+  const dateObj = new Date(date);
 
   return (
     <dl className={className} {...rest}>
@@ -15,7 +15,7 @@ const DateComponent = (props) => {
         </time>
       </dd>
     </dl>
-  )
-}
+  );
+};
 
-export default DateComponent
+export default DateComponent;

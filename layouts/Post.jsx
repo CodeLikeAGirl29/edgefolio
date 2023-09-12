@@ -1,17 +1,17 @@
-import React from 'react'
-import dynamic from 'next/dynamic'
-import { ArticleJsonLd } from 'next-seo'
-import ContentRenderer from '@/components/ContentRenderer'
-import Image from '@/components/Image'
-import Tag from '@/components/Tag'
-import Date from '@/components/Date'
-import ImageGallery from '@/components/ImageGallery'
-import Sep from '@/components/Sep'
-import Newsletter from '@/components/Newsletter'
-import { siteMetaData } from '../theme.config'
-import authorImage from '../public/author-profile-picture.jpg'
+import React from "react";
+import dynamic from "next/dynamic";
+import { ArticleJsonLd } from "next-seo";
+import ContentRenderer from "@/components/ContentRenderer";
+import Image from "@/components/Image";
+import Tag from "@/components/Tag";
+import Date from "@/components/Date";
+import ImageGallery from "@/components/ImageGallery";
+import Sep from "@/components/Sep";
+import Newsletter from "@/components/Newsletter";
+import { siteMetaData } from "../theme.config";
+import authorImage from "../public/author-profile-picture.jpg";
 
-const SocialShare = dynamic(() => import('@/components/SocialShare'))
+const SocialShare = dynamic(() => import("@/components/SocialShare"));
 
 const Layout = ({
   content,
@@ -24,7 +24,7 @@ const Layout = ({
   attributes = [],
   pageUrl,
 }) => {
-  const { siteUrl, authorName } = siteMetaData || {}
+  const { siteUrl, authorName } = siteMetaData || {};
 
   return (
     <>
@@ -42,7 +42,11 @@ const Layout = ({
           <header className="mx-auto max-w-3xl space-y-10 text-center">
             <div>
               {tags?.map((tag) => (
-                <Tag key={tag.title} slug={tag.slug} className="m-0.5 font-mono text-sm lg:mx-1">
+                <Tag
+                  key={tag.title}
+                  slug={tag.slug}
+                  className="m-0.5 font-mono text-sm lg:mx-1"
+                >
                   {tag.title}
                 </Tag>
               ))}
@@ -88,7 +92,10 @@ const Layout = ({
 
           <div className="mt-6 grid gap-6 md:mt-12 md:grid-cols-[auto_3fr_auto] md:gap-0">
             <div>
-              <SocialShare url={pageUrl} className="sticky left-10 top-12 z-10" />
+              <SocialShare
+                url={pageUrl}
+                className="sticky left-10 top-12 z-10"
+              />
             </div>
             <div className="prose prose-invert mx-auto max-w-prose prose-pre:max-w-[90vw]">
               <ContentRenderer source={content} />
@@ -103,7 +110,7 @@ const Layout = ({
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

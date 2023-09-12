@@ -1,7 +1,7 @@
-import ProjectCardHorizontal from '@/components/ProjectCardHorizontal'
-import RepositoryCard from '@/components/RepositoryCard'
-import ContentRenderer from '@/components/ContentRenderer'
-import Reveal from '@/components/Reveal'
+import ProjectCardHorizontal from "@/components/ProjectCardHorizontal";
+import RepositoryCard from "@/components/RepositoryCard";
+import ContentRenderer from "@/components/ContentRenderer";
+import Reveal from "@/components/Reveal";
 
 const Layout = ({ projects, github }) => {
   return (
@@ -10,7 +10,11 @@ const Layout = ({ projects, github }) => {
         <ContentRenderer source={github} />
         <div className="mt-4 grid grid-cols-fluid gap-4 [--tw-fluid-col-min:15rem] md:mt-12 md:gap-6">
           {github?.repositories?.records?.map((item, i) => (
-            <Reveal animation="fade-in slide-in-top" delay={i * 100} key={item.name}>
+            <Reveal
+              animation="fade-in slide-in-top"
+              delay={i * 100}
+              key={item.name}
+            >
               <RepositoryCard {...item} />
             </Reveal>
           ))}
@@ -24,7 +28,7 @@ const Layout = ({ projects, github }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

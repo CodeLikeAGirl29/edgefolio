@@ -1,10 +1,10 @@
-import React from 'react'
-import classNames from 'clsx'
-import ContentRenderer from '@/components/ContentRenderer'
-import Image from '@/components/Image'
-import Sep from '@/components/Sep'
-import Reveal from '@/components/Reveal'
-import Companies from '@/components/Companies'
+import React from "react";
+import classNames from "clsx";
+import ContentRenderer from "@/components/ContentRenderer";
+import Image from "@/components/Image";
+import Sep from "@/components/Sep";
+import Reveal from "@/components/Reveal";
+import Companies from "@/components/Companies";
 
 const HeroPhoto = ({ main }) => (
   <>
@@ -33,27 +33,27 @@ const HeroPhoto = ({ main }) => (
       </div>
     )}
   </>
-)
+);
 
 const HeroAbout = ({ main }) => (
   <Reveal
     animation="fade-in slide-in-right"
     className={classNames(
-      'md:mr-52',
-      'prose prose-invert prose-headings:my-4 first-of-type:prose-headings:mt-0 prose-p:hidden',
-      'md:prose-headings:my-6 md:prose-p:block'
+      "md:mr-52",
+      "prose prose-invert prose-headings:my-4 first-of-type:prose-headings:mt-0 prose-p:hidden",
+      "md:prose-headings:my-6 md:prose-p:block",
     )}
   >
     <ContentRenderer source={main} />
   </Reveal>
-)
+);
 
 const Achievements = ({ achievements }) => (
   <Reveal
     animation="fade-in slide-in-left"
     className={classNames(
-      'prose prose-invert relative z-10 flex flex-wrap md:mt-12',
-      'md:bg-gradient-omega-900 md:shadow-2xl'
+      "prose prose-invert relative z-10 flex flex-wrap md:mt-12",
+      "md:bg-gradient-omega-900 md:shadow-2xl",
     )}
   >
     <Sep line className="hidden md:block" />
@@ -64,10 +64,10 @@ const Achievements = ({ achievements }) => (
       >
         <h2
           className={classNames(
-            'm-0 md:pr-4',
-            i === 0 && 'text-accent',
-            i === 1 && 'text-beta',
-            i >= 2 && 'text-alpha'
+            "m-0 md:pr-4",
+            i === 0 && "text-accent",
+            i === 1 && "text-beta",
+            i >= 2 && "text-alpha",
           )}
         >
           {item.number}
@@ -76,7 +76,7 @@ const Achievements = ({ achievements }) => (
       </div>
     ))}
   </Reveal>
-)
+);
 
 const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
   <div className="mx-auto my-auto p-4 md:p-10 lg:p-20">
@@ -96,6 +96,6 @@ const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
       <Companies {...companies} />
     </div>
   </div>
-)
+);
 
-export default Layout
+export default Layout;

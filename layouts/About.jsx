@@ -1,10 +1,10 @@
-import React from 'react'
-import classNames from 'clsx'
-import ContentRenderer from '@/components/ContentRenderer'
-import Typewriter from '@/components/Typewriter'
-import Reveal from '@/components/Reveal'
-import Image from '@/components/Image'
-import Icon from '@/components/Icon'
+import React from "react";
+import classNames from "clsx";
+import ContentRenderer from "@/components/ContentRenderer";
+import Typewriter from "@/components/Typewriter";
+import Reveal from "@/components/Reveal";
+import Image from "@/components/Image";
+import Icon from "@/components/Icon";
 
 const History = ({ title, list }) => (
   <>
@@ -28,12 +28,17 @@ const History = ({ title, list }) => (
       ))}
     </div>
   </>
-)
+);
 
 const Skill = ({ title, icon, level }) => (
   <div className="flex items-center">
     {icon && (
-      <Icon width={28} height={28} {...icon} className="mr-3 h-7 w-7 fill-current text-omega-500" />
+      <Icon
+        width={28}
+        height={28}
+        {...icon}
+        className="mr-3 h-7 w-7 fill-current text-omega-500"
+      />
     )}
     <small className="font-bold">{title}</small>
     <div className="ml-auto space-x-px">
@@ -43,14 +48,16 @@ const Skill = ({ title, icon, level }) => (
           <span
             key={`${title}${k}-f`}
             className={classNames(
-              'inline-block h-3.5 w-3.5',
-              k + 1 <= level ? 'bg-gradient-to-tr from-accent-700 to-accent' : 'bg-omega-700'
+              "inline-block h-3.5 w-3.5",
+              k + 1 <= level
+                ? "bg-gradient-to-tr from-accent-700 to-accent"
+                : "bg-omega-700",
             )}
           />
         ))}
     </div>
   </div>
-)
+);
 
 const SkillSet = ({ title, list }) => (
   <div className="bg-gradient-omega-900 p-6 md:px-12 md:py-8">
@@ -65,9 +72,15 @@ const SkillSet = ({ title, list }) => (
       ))}
     </div>
   </div>
-)
+);
 
-const Layout = ({ personal_info = {}, cta = {}, skills_header, skills, history }) => {
+const Layout = ({
+  personal_info = {},
+  cta = {},
+  skills_header,
+  skills,
+  history,
+}) => {
   return (
     <div className="mx-auto">
       <div className="prose prose-invert md:flex">
@@ -98,7 +111,10 @@ const Layout = ({ personal_info = {}, cta = {}, skills_header, skills, history }
               <h3 className="mb-2">{skills_header.title}</h3>
               {skills_header.list && (
                 <h3 className="inline">
-                  <Typewriter lines={skills_header.list} lineClassName="text-gradient-500" />
+                  <Typewriter
+                    lines={skills_header.list}
+                    lineClassName="text-gradient-500"
+                  />
                 </h3>
               )}
             </div>
@@ -110,7 +126,10 @@ const Layout = ({ personal_info = {}, cta = {}, skills_header, skills, history }
               ))}
             </div>
           )}
-          <Reveal animation="fade-in slide-in-top" className="prose p-6 dark:prose-invert md:p-12">
+          <Reveal
+            animation="fade-in slide-in-top"
+            className="prose p-6 dark:prose-invert md:p-12"
+          >
             <ContentRenderer source={personal_info} />
           </Reveal>
         </div>
@@ -125,7 +144,7 @@ const Layout = ({ personal_info = {}, cta = {}, skills_header, skills, history }
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

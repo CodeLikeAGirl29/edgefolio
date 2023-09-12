@@ -1,10 +1,10 @@
-import React from 'react'
-import classNames from 'clsx'
-import ContentRenderer from '@/components/ContentRenderer'
-import Image from '@/components/Image'
-import Sep from '@/components/Sep'
-import Reveal from '@/components/Reveal'
-import Companies from '@/components/Companies'
+import React from "react";
+import classNames from "clsx";
+import ContentRenderer from "@/components/ContentRenderer";
+import Image from "@/components/Image";
+import Sep from "@/components/Sep";
+import Reveal from "@/components/Reveal";
+import Companies from "@/components/Companies";
 
 const HeroPhoto = ({ main }) => (
   <>
@@ -33,34 +33,37 @@ const HeroPhoto = ({ main }) => (
       </div>
     )}
   </>
-)
+);
 
 const HeroAbout = ({ main }) => (
   <Reveal
     animation="fade-in slide-in-right"
     className={classNames(
-      'prose prose-invert prose-headings:my-4 first-of-type:prose-headings:mt-0 prose-p:hidden',
-      'prose-headings:my-6 prose-pre:max-w-[100vw] md:prose-p:block md:prose-pre:max-w-lg'
+      "prose prose-invert prose-headings:my-4 first-of-type:prose-headings:mt-0 prose-p:hidden",
+      "prose-headings:my-6 prose-pre:max-w-[100vw] md:prose-p:block md:prose-pre:max-w-lg",
     )}
   >
     <ContentRenderer source={main} />
   </Reveal>
-)
+);
 
 const Achievements = ({ achievements }) => (
   <div
     className={classNames(
-      'prose prose-invert hidden grow grid-cols-2 gap-2 sm:grid md:gap-6 md:pr-6'
+      "prose prose-invert hidden grow grid-cols-2 gap-2 sm:grid md:gap-6 md:pr-6",
     )}
   >
     {achievements?.map((item, i) => (
-      <div key={i} className="flex flex-col items-center justify-center md:flex-row">
+      <div
+        key={i}
+        className="flex flex-col items-center justify-center md:flex-row"
+      >
         <h2 className="m-0 text-white md:pr-4">{item.number}</h2>
         <div className="dark:text-accent-400">{item.text}</div>
       </div>
     ))}
   </div>
-)
+);
 
 const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
   <div className="mx-auto my-auto py-4 md:p-10 lg:p-20">
@@ -77,8 +80,8 @@ const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
       <Sep line className="hidden md:block" />
       <div
         className={classNames(
-          'md:bg-gradient-omega-900 flex flex-wrap items-center justify-between',
-          'px-4 md:p-8 md:shadow-xl'
+          "md:bg-gradient-omega-900 flex flex-wrap items-center justify-between",
+          "px-4 md:p-8 md:shadow-xl",
         )}
       >
         <Achievements achievements={achievements} />
@@ -91,6 +94,6 @@ const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Layout
+export default Layout;
