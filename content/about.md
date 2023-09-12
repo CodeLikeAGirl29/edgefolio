@@ -15,26 +15,36 @@ images:
 ---
 ##### <span>01.</span> About me
 
-Lorem consequat reprehenderit ipsum nulla qui pariatur tempor officia ad. Excepteur excepteur pariatur ad laborum labore reprehenderit. Do eiusmod sit pariatur nisi. Quis non dolor amet magna eu adipisicing est ex.
-
-##### <span>02.</span> Interests and Hobbies
-
-Ad Lorem et amet exercitation enim culpa nulla laboris eu eiusmod. Irure fugiat sunt esse consequat consectetur eu laboris voluptate eiusmod dolor. Nisi velit consectetur deserunt esse aliquip esse officia consequat eiusmod voluptate cupidatat id.
-
-##### <span>03.</span> Framework Preferences
-
-Ullamco cillum pariatur qui eu. Aliqua quis in adipisicing nulla do. Reprehenderit cupidatat eiusmod cupidatat ut ipsum pariatur Lorem incididunt. Veniam sunt reprehenderit consectetur ullamco laborum magna sit aliquip minim esse.
+👋 I'm Lindsey. A hard-working web developer with a flair for creating elegant solutions in the least amount of time. I love being able to help people by simplifying some of life's more complex problems.
 
 
+##### <span>02.</span> My Plan of Attack
+
+1. **Understanding Client Needs:**
+   - The first step in my approach is to understand the client's or project's requirements thoroughly. This involves active listening, asking clarifying questions, and conducting research to gain a comprehensive understanding of the project goals.
+
+2. **Planning and Design:**
+   - Once the requirements are clear, I plan the architecture and design of the website or web application. This includes choosing the right technologies, frameworks, and tools for the project.
+
+3. **Coding and Development:**
+   - The core of my work involves writing code. This includes writing clean, efficient, and maintainable code using programming languages such as HTML, CSS, JavaScript, and backend languages like Python, PHP, or Node.js. Developers also ensure that the code is modular and follows best practices.
+
+4. **Testing and Debugging:**
+   - I always thoroughly test my code to identify and fix any bugs, errors, or issues. This includes unit testing, integration testing, and user testing to ensure that the website functions as expected.
+
+5. **Client Communication:**
+    - Throughout the project, I maintain regular communication with clients or stakeholders. They provide updates, seek feedback, and ensure that the project aligns with the client's vision and goals.
+
+In summary, a web developer's approach to work involves a blend of technical expertise, problem-solving, teamwork, and a dedication to delivering functional, secure, and well-designed web solutions that meet client needs and industry standards.
 
 ---cta
 ---
-## Ready to discuss your project?
+## Have something in mind? Let's talk.
 
-Let's super-charge your business today!
+Elevating Tech to Art.
 
 <Button href="/contact">
-  Get a Free Price Quote
+  Learn More
 </Button>
 
 
@@ -44,7 +54,6 @@ title: I'm Specialized in
 list:
   - Front-End Design
   - Back-End Development
-  - Modern Frameworks
 ---
 
 
@@ -53,25 +62,25 @@ list:
 title: Back-End Development
 list:
   - title: Node.js
-    level: 1
-    icon:
-      src: /icons/nodedotjs.svg
-  - title: Prisma
-    level: 3
-    icon:
-      src: /icons/prisma.svg
-  - title: Svelte
     level: 4
     icon:
-      src: /icons/svelte.svg
+      src: /icons/nodedotjs.svg
+  - title: Express
+    level: 3
+    icon:
+      src: /icons/express.svg
+  - title: Nextjs
+    level: 4
+    icon:
+      src: /icons/nextjs.svg
   - title: HTML5
     level: 5
     icon:
       src: /icons/html5.svg
-  - title: Solidity
-    level: 2
+  - title: PostgreSQL
+    level: 3
     icon:
-      src: /icons/solidity.svg
+      src: /icons/postgresql.svg
 ---
 
 
@@ -91,7 +100,7 @@ list:
     icon:
       src: /icons/react.svg
   - title: Redux
-    level: 4
+    level: 3
     icon:
       src: /icons/redux.svg
   - title: GraphQL
@@ -102,10 +111,10 @@ list:
     level: 4
     icon:
       src: /icons/nodedotjs.svg
-  - title: Prisma
-    level: 5
+  - title: Gatsby
+    level: 3
     icon:
-      src: /icons/prisma.svg
+      src: /icons/gatsby.svg
 ---
 
 
@@ -113,15 +122,12 @@ list:
 ---history[0]
 title: Employment
 list:
-  - name: MetaVerse Inc.
-    description: Web3 Developer
-    date: 2020-Present
-  - name: Vircil Intl Co..
-    description: Back-End Developer and Designer
-    date: 2018-2020
-  - name: Crowdcube Inc.
-    description: Technical Support
-    date: 2018-2015
+  - name: Freelance
+    description: Web Developer
+    date: 2021-Present
+  - name: Tristate Media
+    description: Sales & Marketing
+    date: 2016-2021
 ---
 
 
@@ -129,13 +135,10 @@ list:
 ---history[1]
 title: Education
 list:
-  - name: Stanford university
-    description: MSc (Computer Science)
-    date: 2006-2010
-  - name: University of Los Angeles
-    description: MSc (Human Computer Interaction)
-    date: 2010-2014
-  - name: Berkeley University
-    description: MSc (Information Technology)
-    date: 2015-2019
+  - name: Nucamp
+    description: Fullstack Development Certificate
+    date: 2021-2022
+  - name: Thinkful
+    description: Software Development Certificate
+    date: 2020-2020
 ---

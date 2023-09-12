@@ -1,10 +1,10 @@
 {
-  "name": "next-theme-edgefolio",
+  "name": "next-edgefolio",
   "version": "1.1.2",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ElegantStack/edgefolio.git"
+    "url": "https://github.com/codelikeagirl29/edgefolio.git"
   },
   "engines": {
     "node": ">=14.0"

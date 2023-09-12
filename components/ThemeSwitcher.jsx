@@ -18,6 +18,10 @@ const themes = [
     name: 'cyan',
     switchBg: 'from-cyan-500 to-indigo-500',
   },
+  {
+    name: 'green',
+    switchBg: 'from-green-500 to-emerald-500',
+  },
 ]
 
 const ThemeSwitcher = ({ setTheme }) => {

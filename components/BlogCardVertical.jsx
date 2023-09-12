@@ -9,7 +9,7 @@ import { IoCalendarOutline } from 'react-icons/io5'
 const BlogCardVertical = ({ className, title, images, slug, description, date, tags }) => (
   <div
     className={classNames(
-      'group prose prose-zinc block flex flex-col',
+      'group prose prose-zinc flex flex-col',
       'from-omega-900 via-omega-900 to-omega-800 dark:prose-invert dark:sm:bg-gradient-to-b dark:sm:shadow-md',
       className
     )}

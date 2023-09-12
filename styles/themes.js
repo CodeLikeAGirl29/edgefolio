@@ -6,10 +6,10 @@ const teal = require('./theme.teal')
 const green = require('./theme.green')
 
 module.exports = {
-  default: green,
-  amber,
+  default: amber,
   rose,
   cyan,
   lime,
   teal,
+  green,
 }

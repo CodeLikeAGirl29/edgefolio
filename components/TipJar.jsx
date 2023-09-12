@@ -55,7 +55,7 @@ const TipJar = (props) => {
       <p className="my-2 text-black md:m-0">
         Hi there! <strong className="text-black">Want to support my work?</strong>
       </p>
-      <BiCoffee className="mx-4 ml-auto inline hidden text-5xl text-omega-800 md:block" />
+      <BiCoffee className="mx-4 ml-auto hidden text-5xl text-omega-800 md:block" />
       <div>
         <Button size="xs" className="font-bold" data-commerce href={tipUrl}>
           Buy me a coffee

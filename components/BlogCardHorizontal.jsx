@@ -9,7 +9,7 @@ import { IoCalendarOutline } from 'react-icons/io5'
 const BlogCardHorizontal = ({ className, title, images, slug, description, date, tags }) => (
   <div
     className={classNames(
-      'group prose prose-zinc block flex dark:prose-invert',
+      'group prose prose-zinc flex dark:prose-invert',
       'dark:sm:bg-gradient-omega-900 dark:sm:shadow-lg',
       className
     )}

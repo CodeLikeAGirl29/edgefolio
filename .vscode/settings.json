@@ -1,9 +1,0 @@
-{
-	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
-	"tailwindCSS.classAttributes": [
-		"class",
-		"className",
-		"ngClass",
-		"classNameInView"
-	]
-}
