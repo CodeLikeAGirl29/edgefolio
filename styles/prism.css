@@ -14,6 +14,9 @@ code {
 pre[class*='language-'] {
   @apply my-8 rounded-none font-mono text-base;
   background: var(--tw-prose-pre-bg);
+  padding: 2em;
+  margin: 0.5em 0;
+  overflow: auto;
 }
 
 pre[class*='language-'] code[class*='language-'] {
@@ -115,12 +118,6 @@ code[class*='language-'] ::selection {
 }
 
 /* Code blocks. */
-pre[class*='language-'] {
-  padding: 2em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
   background: #1e1e3f;
