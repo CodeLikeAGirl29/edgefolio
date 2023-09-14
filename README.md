@@ -4,6 +4,8 @@ Welcome to my personal portfolio website built using Next.js!
 
 [![CodeFactor](https://www.codefactor.io/repository/github/codelikeagirl29/edgefolio/badge/main)](https://www.codefactor.io/repository/github/codelikeagirl29/edgefolio/overview/main)
 
+> Live link can be found [here](https://edgefolio-eta.vercel.app/)
+
 ## About
 
 This project showcases my skills, projects, and experiences as a web developer. It's designed to provide a clean and efficient way to present my work to potential employers, clients, or collaborators.
@@ -19,6 +21,10 @@ This project showcases my skills, projects, and experiences as a web developer. 
 - **Contact Form**: Reach out to me directly through the integrated contact form for inquiries, collaborations, or job opportunities.
 
 - **Blog Section**: Stay updated with my latest thoughts and insights on web development trends and technologies.
+
+## Screenshot
+
+![screenshot](https://res.cloudinary.com/codelikeagirl29/image/upload/v1694724024/projects/Lindsey-Howard-Web-Developer_jjmvvx.png)
 
 ## Technologies Used
 
