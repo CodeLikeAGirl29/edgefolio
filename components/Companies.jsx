@@ -1,6 +1,6 @@
-import React from 'react'
-import Reveal from '@/components/Reveal'
-import Icon from '@/components/Icon'
+import React from "react";
+import Reveal from "@/components/Reveal";
+import Icon from "@/components/Icon";
 
 const Companies = ({ title, list }) => (
   <div className="prose prose-invert flex h-12 flex-wrap items-center justify-between">
@@ -8,10 +8,12 @@ const Companies = ({ title, list }) => (
     {list &&
       list.map(({ icon }, i) => (
         <Reveal key={i} animation="fade-in zoom-in" delay={i * 250}>
-          {icon && <Icon {...icon} className="h-12 w-36 fill-current text-omega-500" />}
+          {icon && (
+            <Icon {...icon} className="h-12 w-36 fill-current text-omega-500" />
+          )}
         </Reveal>
       ))}
   </div>
-)
+);
 
-export default Companies
+export default Companies;

@@ -1,28 +1,28 @@
-import classNames from 'clsx'
-import { HiOutlineColorSwatch } from 'react-icons/hi'
+import classNames from "clsx";
+import { HiOutlineColorSwatch } from "react-icons/hi";
 
 const themes = [
   {
-    name: 'lime',
-    switchBg: 'from-lime-500 to-green-500',
+    name: "lime",
+    switchBg: "from-lime-500 to-green-500",
   },
   {
-    name: 'amber',
-    switchBg: 'from-amber-500 to-red-500',
+    name: "amber",
+    switchBg: "from-amber-500 to-red-500",
   },
   {
-    name: 'rose',
-    switchBg: 'from-rose-500 to-purple-500',
+    name: "rose",
+    switchBg: "from-rose-500 to-purple-500",
   },
   {
-    name: 'cyan',
-    switchBg: 'from-cyan-500 to-indigo-500',
+    name: "cyan",
+    switchBg: "from-cyan-500 to-indigo-500",
   },
   {
-    name: 'green',
-    switchBg: 'from-green-500 to-emerald-500',
+    name: "green",
+    switchBg: "from-green-500 to-emerald-500",
   },
-]
+];
 
 const ThemeSwitcher = ({ setTheme }) => {
   return (
@@ -33,13 +33,13 @@ const ThemeSwitcher = ({ setTheme }) => {
           key={name}
           className={classNames(
             switchBg,
-            'h-5 w-5 origin-right cursor-pointer bg-gradient-to-br transition-all hover:scale-x-150'
+            "h-5 w-5 origin-right cursor-pointer bg-gradient-to-br transition-all hover:scale-x-150",
           )}
           onClick={() => setTheme(name)}
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default ThemeSwitcher
+export default ThemeSwitcher;

@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 const theme = {
   // Primary color
@@ -9,6 +9,6 @@ const theme = {
   accent: colors.pink,
   // Neutral color
   omega: colors.zinc,
-}
+};
 
-module.exports = theme
+module.exports = theme;

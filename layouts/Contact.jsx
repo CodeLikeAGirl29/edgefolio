@@ -1,18 +1,18 @@
-import React from 'react'
-import classNames from 'clsx'
-import { useForm, FormProvider } from 'react-hook-form'
-import ContentRenderer from '@/components/ContentRenderer'
-import Reveal from '@/components/Reveal'
-import FormInput from '@/components/FormInput'
-import FormTextarea from '@/components/FormTextarea'
-import FormSelect from '@/components/FormSelect'
-import FormCheckbox from '@/components/FormCheckbox'
-import FormRadio from '@/components/FormRadio'
-import Button from '@/components/Button'
-import { SlCheck } from 'react-icons/sl'
-import { config } from '../theme.config'
+import React from "react";
+import classNames from "clsx";
+import { useForm, FormProvider } from "react-hook-form";
+import ContentRenderer from "@/components/ContentRenderer";
+import Reveal from "@/components/Reveal";
+import FormInput from "@/components/FormInput";
+import FormTextarea from "@/components/FormTextarea";
+import FormSelect from "@/components/FormSelect";
+import FormCheckbox from "@/components/FormCheckbox";
+import FormRadio from "@/components/FormRadio";
+import Button from "@/components/Button";
+import { SlCheck } from "react-icons/sl";
+import { config } from "../theme.config";
 
-const { inputs } = config.contactForm || {}
+const { inputs } = config.contactForm || {};
 
 const FormComponent = {
   text: FormInput,
@@ -20,12 +20,14 @@ const FormComponent = {
   select: FormSelect,
   radio: FormRadio,
   checkbox: FormCheckbox,
-}
+};
 
 const ErrorMessage = ({ errors, name }) =>
   errors[name] ? (
-    <div className="mb-4 block bg-red-500/5 px-4 py-2 text-red-500">{errors[name].message}</div>
-  ) : null
+    <div className="mb-4 block bg-red-500/5 px-4 py-2 text-red-500">
+      {errors[name].message}
+    </div>
+  ) : null;
 
 const SuccessMessage = () => (
   <Reveal animation="fade-in">
@@ -37,45 +39,45 @@ const SuccessMessage = () => (
       </div>
     </div>
   </Reveal>
-)
+);
 
 const Contact01 = ({ main = {} }) => {
-  const methods = useForm()
+  const methods = useForm();
   const {
     register,
     formState: { errors, isValidating, isSubmitting, isSubmitSuccessful },
     handleSubmit,
     setError,
     clearErrors,
-  } = methods
+  } = methods;
 
   const onSubmit = async (data) => {
     try {
       const res = await fetch(`/api/contact-form`, {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify(data),
         headers: new Headers({
-          'Content-Type': 'application/json',
-          credentials: 'same-origin',
+          "Content-Type": "application/json",
+          credentials: "same-origin",
         }),
-      })
+      });
       if (res.status === 201) {
-        return true
+        return true;
       }
-      const json = await res.json()
+      const json = await res.json();
       if (json.error) {
-        throw json.error
+        throw json.error;
       }
     } catch (error) {
-      setError('service', { type: 'serviceSideError', message: error })
+      setError("service", { type: "serviceSideError", message: error });
     }
-  }
+  };
 
   React.useEffect(() => {
     if (errors.service && isValidating) {
-      clearErrors('service')
+      clearErrors("service");
     }
-  }, [isValidating, errors.service, clearErrors])
+  }, [isValidating, errors.service, clearErrors]);
 
   return (
     <div className="my-auto p-3 md:p-6 lg:p-12">
@@ -96,23 +98,32 @@ const Contact01 = ({ main = {} }) => {
                 {isSubmitSuccessful && <SuccessMessage />}
                 <div className="bg-gradient-omega-900">
                   {inputs?.map(({ legend, columns, fields }, i) => (
-                    <fieldset key={i} className="border-b border-dashed border-omega-700">
+                    <fieldset
+                      key={i}
+                      className="border-b border-dashed border-omega-700"
+                    >
                       <div className="bg-omega-800 p-5">
                         <legend className="m-0 p-0">{legend}</legend>
                       </div>
                       <div
-                        className={classNames('grid gap-2 p-5', {
-                          'md:grid-cols-2': columns === 2,
-                          'md:grid-cols-3': columns === 3,
+                        className={classNames("grid gap-2 p-5", {
+                          "md:grid-cols-2": columns === 2,
+                          "md:grid-cols-3": columns === 3,
                         })}
                       >
                         {fields.map((input, j) => {
-                          const Component = FormComponent[input.type]
+                          const Component = FormComponent[input.type];
                           return input.type && Component ? (
-                            <div key={(input.id || input.name) + j} className="flex items-center">
-                              <Component {...input} {...register(input.id || input.name)} />
+                            <div
+                              key={(input.id || input.name) + j}
+                              className="flex items-center"
+                            >
+                              <Component
+                                {...input}
+                                {...register(input.id || input.name)}
+                              />
                             </div>
-                          ) : null
+                          ) : null;
                         })}
                       </div>
                     </fieldset>
@@ -136,6 +147,6 @@ const Contact01 = ({ main = {} }) => {
         </Reveal>
       </div>
     </div>
-  )
-}
-export default Contact01
+  );
+};
+export default Contact01;

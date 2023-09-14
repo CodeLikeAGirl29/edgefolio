@@ -1,5 +1,5 @@
-import React from 'react'
-import classNames from 'clsx'
+import React from "react";
+import classNames from "clsx";
 
 const FormInput = React.forwardRef((props, ref) => {
   const {
@@ -9,17 +9,17 @@ const FormInput = React.forwardRef((props, ref) => {
     name,
     autoComplete,
     hasError,
-    type = 'text',
+    type = "text",
     inputType,
     ...rest
-  } = props
+  } = props;
 
   const tags = {
-    text: 'input',
-    textarea: 'textarea',
-  }
+    text: "input",
+    textarea: "textarea",
+  };
 
-  const Component = tags[type]
+  const Component = tags[type];
 
   return (
     <>
@@ -35,19 +35,19 @@ const FormInput = React.forwardRef((props, ref) => {
         name={name}
         autoComplete={autoComplete}
         className={classNames(
-          'block w-full border-0 py-3 px-4',
-          'border-b bg-omega-700/20  placeholder-omega-400',
+          "block w-full border-0 py-3 px-4",
+          "border-b bg-omega-700/20  placeholder-omega-400",
           hasError
-            ? 'border-red-500 focus:border-0 focus:ring-red-500'
-            : 'border-accent focus:ring-accent-500'
+            ? "border-red-500 focus:border-0 focus:ring-red-500"
+            : "border-accent focus:ring-accent-500",
         )}
         placeholder={placeholder}
         {...rest}
       />
     </>
-  )
-})
+  );
+});
 
-FormInput.displayName = 'FormInput'
+FormInput.displayName = "FormInput";
 
-export default FormInput
+export default FormInput;

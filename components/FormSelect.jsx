@@ -1,8 +1,8 @@
-import React from 'react'
-import classNames from 'clsx'
+import React from "react";
+import classNames from "clsx";
 
 const FormSelect = React.forwardRef((props, ref) => {
-  const { label, name, autoComplete, hasError, ...rest } = props
+  const { label, name, autoComplete, hasError, ...rest } = props;
 
   return (
     <>
@@ -17,11 +17,11 @@ const FormSelect = React.forwardRef((props, ref) => {
         name={name}
         autoComplete={autoComplete}
         className={classNames(
-          'block w-full border-0 py-3 px-4',
-          'border-b bg-omega-700/20  placeholder-omega-400',
+          "block w-full border-0 py-3 px-4",
+          "border-b bg-omega-700/20  placeholder-omega-400",
           hasError
-            ? 'border-red-500 focus:border-0 focus:ring-red-500'
-            : 'border-accent focus:ring-accent-500'
+            ? "border-red-500 focus:border-0 focus:ring-red-500"
+            : "border-accent focus:ring-accent-500",
         )}
         {...rest}
       >
@@ -32,9 +32,9 @@ const FormSelect = React.forwardRef((props, ref) => {
         ))}
       </select>
     </>
-  )
-})
+  );
+});
 
-FormSelect.displayName = 'FormSelect'
+FormSelect.displayName = "FormSelect";
 
-export default FormSelect
+export default FormSelect;

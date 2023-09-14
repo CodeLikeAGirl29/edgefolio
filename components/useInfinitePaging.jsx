@@ -1,20 +1,20 @@
-import React from 'react'
-import { useRouter } from 'next/router'
+import React from "react";
+import { useRouter } from "next/router";
 
 const useInfinitePaging = ({ enabled, currentPage, records }) => {
-  const router = useRouter()
-  const [infiniteRecords, setInfiniteRecords] = React.useState({})
+  const router = useRouter();
+  const [infiniteRecords, setInfiniteRecords] = React.useState({});
 
   const {
     query: { infinite = false },
-  } = router
+  } = router;
 
   React.useEffect(() => {
-    if (!records || !enabled) return
+    if (!records || !enabled) return;
 
     const newRecords = {
       [currentPage]: { records },
-    }
+    };
 
     setInfiniteRecords((records) =>
       infinite
@@ -22,11 +22,11 @@ const useInfinitePaging = ({ enabled, currentPage, records }) => {
             ...records,
             ...newRecords,
           }
-        : newRecords
-    )
-  }, [currentPage, enabled, infinite, records])
+        : newRecords,
+    );
+  }, [currentPage, enabled, infinite, records]);
 
-  return [infiniteRecords]
-}
+  return [infiniteRecords];
+};
 
-export default useInfinitePaging
+export default useInfinitePaging;

@@ -1,13 +1,13 @@
-import React from 'react'
-import classNames from 'clsx'
-import * as s from './Loader.module.css'
+import React from "react";
+import classNames from "clsx";
+import * as s from "./Loader.module.css";
 
 const Loader = (props) => {
-  const { className, text } = props
+  const { className, text } = props;
 
   return (
     <div className="w-full text-center">
-      <div className={classNames('mx-auto h-10 w-10', className)}>
+      <div className={classNames("mx-auto h-10 w-10", className)}>
         <svg viewBox="0 0 226 200">
           <defs>
             <linearGradient
@@ -33,7 +33,7 @@ const Loader = (props) => {
       </div>
       {text && <p className="prose dark:prose-invert">{text}</p>}
     </div>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

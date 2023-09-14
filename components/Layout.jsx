@@ -1,19 +1,19 @@
-import React from 'react'
-import classNames from 'clsx'
-import Menu from '@/components/Menu'
-import ThemeSwitcher from '@/components/ThemeSwitcher'
-import fonts from '@/styles/fonts'
+import React from "react";
+import classNames from "clsx";
+import Menu from "@/components/Menu";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import fonts from "@/styles/fonts";
 
 const Layout = (props) => {
-  const { children } = props
-  const [theme, setTheme] = React.useState({})
+  const { children } = props;
+  const [theme, setTheme] = React.useState({});
 
   return (
     <div
       className={classNames(
-        'dark relative flex min-h-screen w-full justify-center bg-black font-sans lg:px-4 xl:px-8',
+        "dark relative flex min-h-screen w-full justify-center bg-black font-sans lg:px-4 xl:px-8",
         theme,
-        ...fonts
+        ...fonts,
       )}
     >
       <ThemeSwitcher setTheme={setTheme} />
@@ -28,7 +28,7 @@ const Layout = (props) => {
       </div>
       <Menu />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

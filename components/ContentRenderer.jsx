@@ -1,16 +1,16 @@
-import React from 'react'
-import { MDXRemote } from 'next-mdx-remote'
+import React from "react";
+import { MDXRemote } from "next-mdx-remote";
 
 const ContentRenderer = (props) => {
-  const { source } = props
+  const { source } = props;
 
-  if (!source) return null
+  if (!source) return null;
 
-  const content = source.compiledSource ? source : source.content
+  const content = source.compiledSource ? source : source.content;
 
-  if (!content) return null
+  if (!content) return null;
 
-  return <MDXRemote {...content} />
-}
+  return <MDXRemote {...content} />;
+};
 
-export default ContentRenderer
+export default ContentRenderer;

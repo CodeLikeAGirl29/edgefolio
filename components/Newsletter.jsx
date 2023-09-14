@@ -1,9 +1,9 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import FormInput from '@/components/FormInput'
-import Icon from '@/components/Icon'
-import Button from '@/components/Button'
-import { IoClose } from 'react-icons/io5'
+import React from "react";
+import { useForm } from "react-hook-form";
+import FormInput from "@/components/FormInput";
+import Icon from "@/components/Icon";
+import Button from "@/components/Button";
+import { IoClose } from "react-icons/io5";
 
 const IntroMessage = () => (
   <div className="prose dark:prose-invert">
@@ -12,25 +12,32 @@ const IntroMessage = () => (
     </h3>
     <h6>Want to become a Next.js pro?</h6>
     <small>
-      The best articles, links and news related to web development delivered once a week to your
-      inbox.
+      The best articles, links and news related to web development delivered
+      once a week to your inbox.
     </small>
   </div>
-)
+);
 
 const ErrorMessage = ({ errors, name }) =>
   errors[name] ? (
-    <div className="block bg-red-500/5 px-4 py-1 text-xs text-red-500">{errors[name].message}</div>
-  ) : null
+    <div className="block bg-red-500/5 px-4 py-1 text-xs text-red-500">
+      {errors[name].message}
+    </div>
+  ) : null;
 
 const SuccessMessage = ({ handleReset }) => (
   <div className="my-6 mx-auto flex max-w-md justify-between bg-omega-800 p-3">
-    <span className="text-alpha">Please check your inbox and confirm your email.</span>
-    <button onClick={() => handleReset()} className="h-5 w-5 hover:bg-omega-900">
+    <span className="text-alpha">
+      Please check your inbox and confirm your email.
+    </span>
+    <button
+      onClick={() => handleReset()}
+      className="h-5 w-5 hover:bg-omega-900"
+    >
       <IoClose className="mx-auto h-4 w-4 text-omega-500" />
     </button>
   </div>
-)
+);
 
 const Badge = () => (
   <div>
@@ -47,7 +54,7 @@ const Badge = () => (
       />
     </a>
   </div>
-)
+);
 
 const Newsletter = ({ className }) => {
   const {
@@ -57,35 +64,35 @@ const Newsletter = ({ className }) => {
     setError,
     clearErrors,
     reset,
-  } = useForm()
+  } = useForm();
 
   const onSubmit = async (data) => {
     try {
       const res = await fetch(`/api/subscribe`, {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify(data),
         headers: new Headers({
-          'Content-Type': 'application/json',
-          credentials: 'same-origin',
+          "Content-Type": "application/json",
+          credentials: "same-origin",
         }),
-      })
+      });
       if (res.status === 201) {
-        return true
+        return true;
       }
-      const json = await res.json()
+      const json = await res.json();
       if (json.error) {
-        throw json.error
+        throw json.error;
       }
     } catch (error) {
-      setError('service', { type: 'serviceSideError', message: error })
+      setError("service", { type: "serviceSideError", message: error });
     }
-  }
+  };
 
   React.useEffect(() => {
     if (errors.service && isValidating) {
-      clearErrors('service')
+      clearErrors("service");
     }
-  }, [isValidating, errors.service, clearErrors])
+  }, [isValidating, errors.service, clearErrors]);
 
   return (
     <div className={className}>
@@ -105,14 +112,14 @@ const Newsletter = ({ className }) => {
               placeholder="Johndoe@example.com"
               aria-label="email address"
               hasError={errors.email || errors.service}
-              {...register('email', {
+              {...register("email", {
                 required: {
                   value: true,
-                  message: 'Email is required.',
+                  message: "Email is required.",
                 },
                 pattern: {
                   value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
-                  message: 'Email is invalid.',
+                  message: "Email is invalid.",
                 },
               })}
             />
@@ -128,7 +135,7 @@ const Newsletter = ({ className }) => {
       )}
       <Badge />
     </div>
-  )
-}
+  );
+};
 
-export default Newsletter
+export default Newsletter;
