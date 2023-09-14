@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio website built using Next.js!
 
+[![CodeFactor](https://www.codefactor.io/repository/github/codelikeagirl29/edgefolio/badge/main)](https://www.codefactor.io/repository/github/codelikeagirl29/edgefolio/overview/main)
+
 ## About
 
 This project showcases my skills, projects, and experiences as a web developer. It's designed to provide a clean and efficient way to present my work to potential employers, clients, or collaborators.
